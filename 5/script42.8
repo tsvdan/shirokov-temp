@@ -1,4 +1,8 @@
 #!/bin/bash
 
+# 8. Создайте командный файл, который по команде read запрашивает имя пользователя 
+# и выдает список запущенных им процессов (выведите следующие атрибуты процесса – 
+# PID, STAT, COMMAND, TIME, PRI, NI). 
+
 read uname
 ps -eo pid,stat,command,time,pri,ni --sort=pid

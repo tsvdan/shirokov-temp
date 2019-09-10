@@ -5,4 +5,4 @@
 # PID, STAT, COMMAND, TIME, PRI, NI). 
 
 read uname
-ps -eo pid,stat,command,time,pri,ni --sort=pid
+ps -eo pid,stat,command,time,pri,ni --sort=pid | grep $uname

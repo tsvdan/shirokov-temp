@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Введите имя пользователя"
+read name
+
+pass_entry=$(grep $name /etc/passwd)
+
+if [ -z $pass_entry ]; 
+# так же работает с -s
+then
+    echo $pass_entry
+    echo "Пользователь $1 не существует"
+    return 1
+else
+    echo $pass_entry
+    echo "Пользователь $1 существует"
+fi

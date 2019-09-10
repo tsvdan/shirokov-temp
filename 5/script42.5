@@ -1,0 +1,12 @@
+#!/bin/bash
+# директории, в том числе и ., .. - считаю за файлы
+# т.е. опять-таки без дополнительных проверок
+
+read fname
+
+if [ $(ls -la /home/$USER | grep $fname | wc -l) -gt 0 ];
+then
+    echo "exists"
+else
+    echo "does not exist"
+fi

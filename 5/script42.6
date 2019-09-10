@@ -1,0 +1,23 @@
+#!/bin/bash
+
+print_hello() {
+    local i=1
+    while [ $i -le $1 ]; 
+    do
+        (( i = $i + 1 ))
+        echo "Hello!"
+    done
+}
+#===========================
+
+read a b
+
+let  ab_sum=$a+$b
+let ab_prod=$a*$b
+
+if [ $ab_sum -le $ab_prod ];
+then
+    print_hello $ab_sum
+else
+    print_hello $ab_prod
+fi

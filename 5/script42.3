@@ -1,0 +1,22 @@
+#!/bin/bash
+
+DIR="/usr/temp"
+FNAME="file"
+
+
+if [ ! -d $DIR ]; then
+    echo "Создаю $DIR"
+    mkdir $DIR
+fi
+
+echo "$DIR до копирования"
+ls -a $DIR
+
+echo
+echo "Наберите файл (<Ctrl-D> для прерывания)"
+cat > temp__unique
+cp temp__unique /usr/temp/$FNAME
+
+echo
+echo "$DIR после копирования"
+ls -a $DIR

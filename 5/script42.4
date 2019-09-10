@@ -1,0 +1,10 @@
+#!/bin/bash
+
+read fname destpath
+# здесб можно тысячу разных проверок или
+# вариантов работы проидумать.
+# Сделано минимально по ТЗ
+
+if [ -d $destpath ]; then
+    cp $fname $destpath
+fi

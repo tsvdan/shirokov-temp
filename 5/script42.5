@@ -11,7 +11,7 @@
 
 read fname
 
-if [ $(ls -la /home/$USER | grep $fname | wc -l) -gt 0 ];
+if [ $(ls -la ~ | grep "\b$fname\b" | wc -l) -gt 0 ];
 then
     echo "exists"
 else

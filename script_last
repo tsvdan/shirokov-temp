@@ -1,0 +1,12 @@
+#!/bin/bash
+
+read $ttyn
+ps -eo pid,command,tty,lstart --sort lstart | grep tty$ttyn | head -n -1 > ps_out_file
+
+if [ -s ps_out_file ];
+then 
+    last_p=$(tail -n 1 ps_out_file)
+    echo last_p
+else
+    echo Нет таких процессов
+fi
